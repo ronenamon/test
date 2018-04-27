@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const mysql = require('mysql');
+
 
 /*app.get('/' , (req,res)=> {
 
@@ -36,6 +38,15 @@ app.get('/users' , (req,res)=> {
 
 });
 
+
+//get user by id
+app.get('/user/:id' , (req,res)=>{
+    console.log("user route request with id" + req.params.id);
+
+
+
+    res.end();
+});
 
 
 
