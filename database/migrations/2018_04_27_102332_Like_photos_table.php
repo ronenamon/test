@@ -14,6 +14,15 @@ class LikePhotosTable extends Migration
     public function up()
     {
         //
+        //
+        Schema::create('photos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('hash_name')->unique();
+            $table->timestamps();
+        });
+
+
     }
 
     /**
