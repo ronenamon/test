@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Photos;
 use Illuminate\Http\Request;
 
 class PhotosController extends Controller
@@ -14,7 +13,8 @@ class PhotosController extends Controller
      */
     public function index()
     {
-        //
+        return view('main');
+
     }
 
     /**
@@ -24,7 +24,7 @@ class PhotosController extends Controller
      */
     public function create()
     {
-        //
+        return view('upload_file');
     }
 
     /**

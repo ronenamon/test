@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "PhotosController@index");
+
+
+
+Route::get('/new', "PhotosController@create");
+Route::post('/upload', "FileUploadController@upload");
