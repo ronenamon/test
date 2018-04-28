@@ -21,6 +21,14 @@ class CreateMoviesTable extends Migration
             $table->string('path')->default('path');
             $table->timestamps();
         });
+
+       /* Schema::create('photos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('movie_id');
+            $table->binary('photo_data')->nullable();
+            $table->timestamps();
+        });*/
     }
 
     /**
