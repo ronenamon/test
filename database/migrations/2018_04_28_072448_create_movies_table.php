@@ -17,7 +17,8 @@ class CreateMoviesTable extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('link');
+            $table->string('stream_link');
+            $table->string('path')->default('path');
             $table->timestamps();
         });
     }
