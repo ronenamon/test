@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+
 class PhotosController extends Controller
 {
     /**
@@ -13,7 +15,8 @@ class PhotosController extends Controller
      */
     public function index()
     {
-        return view('main');
+        $movies = DB::table('photos')->get();
+        return view('main',['movies' => $movies]);
 
     }
 
