@@ -24,6 +24,10 @@
                 <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
             </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
                             class="glyphicon glyphicon-th"></span>Grid</a>
+
+                <a href="new" id="grid" class="btn btn-default btn-sm"><span
+                            class="glyphicon glyphicon-th"></span>Add</a>
+
             </div>
         </div>
         <div id="products" class="row list-group">
