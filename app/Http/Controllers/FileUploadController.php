@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 
@@ -39,9 +40,12 @@ class FileUploadController extends Controller
             */
 
             // rename image name or file name
-            $getimageName = time().'.'.$request->file_upload->getClientOriginalExtension();
-            $request->file_upload->move(public_path('server'), $getimageName);
-         /*   return back()
+            $getimageName = 'image_'.date('Y-M-DH-m-s').'_'.time().'.'.$request->file_upload->getClientOriginalExtension();
+            $request->file_upload->move(public_path('images'), $getimageName);
+
+            DB::table('photos')->insert(
+                ['name' => date('Y-M-DH-m-s'), 'hash_name' => $getimageName]
+            );          /*  return back()
                 ->with('success','images Has been You uploaded successfully.')
                 ->with('image',$getimageName);*/
 
